@@ -19,9 +19,12 @@ public class SkelDamage : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            animacion.SetTrigger("Hit");
-            Debug.Log("toco al jugador");
-            other.gameObject.GetComponent<PlayerLife>().Danio(damage);
+            //Debug.Log("vida1: " + PlayerLife.vidaP);
+
+           // Debug.Log("toco al jugador");
+            // other.gameObject.GetComponent<PlayerLife>().Danio(damage);
+            PlayerLife.vidaP = PlayerLife.vidaP - damage;
+            //Debug.Log("vida2: " + PlayerLife.vidaP);
         }
     }
 }

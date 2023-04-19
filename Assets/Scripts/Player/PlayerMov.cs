@@ -79,11 +79,24 @@ public class PlayerMov : MonoBehaviour
         }
         
     }
+    //Ataque
     public void atac(InputAction.CallbackContext context)
-    {
-        if (context.performed && tiempoSiguienteAtaque <= 0)
+    {      
+        if (context.performed && tiempoSiguienteAtaque <= 0 )
         {
-            Golpe();
+            audio.Play();
+            animacion.SetTrigger("Atac");
+            Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
+            foreach (Collider2D colisionador in objetos)
+            {
+                if (colisionador.CompareTag("Enemy"))
+                {
+                    //animacionE.SetTrigger("Hit");
+                    //LifeSistemEnemy.vida = LifeSistemEnemy.vida - danioGolpe;
+                    colisionador.transform.GetComponent<LifeSistemEnemy>().Danio(danioGolpe);
+                }
+            }
+            //Golpe();
             tiempoSiguienteAtaque = tiempoEntreAtaques;
         }
     }
@@ -174,6 +187,7 @@ public class PlayerMov : MonoBehaviour
         isfacingR = !isfacingR;
         transform.Rotate(new Vector3(0, 180, 0));
     }
+    /*
     void Golpe()
     {
         audio.Play();
@@ -189,6 +203,7 @@ public class PlayerMov : MonoBehaviour
             }
         }
     }
+    */
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
