@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] public static float vidaP;
+    [SerializeField] public static float vidaP=100;
     [SerializeField] private Animator animacion;
     public float vidaACT;
 
@@ -13,14 +13,19 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         //animacion = GetComponent<Animator>();
-        vidaP = 100;
+        //vidaP = 100;
         vidaACT = vidaP;
+
+        if (PlayerPrefs.HasKey("Health"))
+        {
+            vidaP = PlayerPrefs.GetInt("Health");
+        }
     }
 
     public void Danio(float damage)
     {
         vidaP -= damage;
-
+        PlayerPrefs.SetFloat("Health", vidaP);
         if (vidaP <= 0)
         {
             Muerte();
@@ -29,7 +34,10 @@ public class PlayerLife : MonoBehaviour
     public void Muerte()
     {
         //animacion.SetTrigger("dai");
+        PlayerPrefs.DeleteAll();
+        vidaP = 100;
         SceneManager.LoadScene(1);
+        
     }
     public void Guardar()
     {

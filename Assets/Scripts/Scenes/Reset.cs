@@ -7,13 +7,13 @@ public class Reset : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
-        {
-            SceneManager.LoadScene(2);               
-        }
+        //if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+        //{
+        //   SceneManager.LoadScene(2);               
+        //}
     }
 }

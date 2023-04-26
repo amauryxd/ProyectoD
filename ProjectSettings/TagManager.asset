@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Music
+  - Spawn
   layers:
   - Default
   - TransparentFX
