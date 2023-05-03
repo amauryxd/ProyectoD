@@ -14,7 +14,7 @@ public class LifeSistemEnemy : MonoBehaviour
     void Start()
     {
         animacion = GetComponent<Animator>();
-        vida = 50;
+        vida = 5;
     }
     
     public void Danio(float damage)

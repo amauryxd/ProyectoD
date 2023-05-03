@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] public static float vidaP=100;
+    [SerializeField] public static int vidaP=10;
     [SerializeField] private Animator animacion;
     public float vidaACT;
 
@@ -22,7 +22,7 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-    public void Danio(float damage)
+    public void Danio(int damage)
     {
         vidaP -= damage;
         PlayerPrefs.SetFloat("Health", vidaP);

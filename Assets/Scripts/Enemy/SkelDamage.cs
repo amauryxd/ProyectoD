@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkelDamage : MonoBehaviour
 {
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
     public Animator animacion;
     private void OnCollisionEnter2D(Collision2D other)
     {

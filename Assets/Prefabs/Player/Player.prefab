@@ -292,7 +292,7 @@ MonoBehaviour:
   onAir: 0
   controladorGolpe: {fileID: 7532181241078791663}
   radioGolpe: 0.5
-  danioGolpe: 10
+  danioGolpe: 1
   tiempoEntreAtaques: 0.8
   tiempoSiguienteAtaque: 0
   animacion: {fileID: 7532181240744472693}
@@ -465,9 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef2acfbc19dc5d48b47bbc5ca7f5988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  portal1: {fileID: 0}
-  portal2: {fileID: 0}
 --- !u!1 &7532181241078791662
 GameObject:
   m_ObjectHideFlags: 0
