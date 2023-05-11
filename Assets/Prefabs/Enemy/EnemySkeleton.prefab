@@ -155,11 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 2
   controlador: {fileID: 2608769258508801716}
-  distancia: 2
+  distancia: 0.9
   moviendoDerecha: 0
-  vision: {fileID: 5147420452376222858}
-  Player: {fileID: 0}
-  informacionSuelo: {fileID: 3944860879318435181}
 --- !u!95 &2608769259447099493
 Animator:
   serializedVersion: 4
@@ -328,7 +325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &944825467908697443
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2802794883374521956
 Transform:
   m_ObjectHideFlags: 0

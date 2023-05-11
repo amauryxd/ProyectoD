@@ -9,21 +9,10 @@ public class WayPointMove : MonoBehaviour
     private int sigPlatf = 1;
     private bool ordenPtalf = true;
     [SerializeField] GameObject ojo;
-    bool isTouch;
+    public static bool isTouch;
     [SerializeField] GameObject play;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("toco");
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            isTouch = true;
-        }
-        else
-        {
-            isTouch = false;
-        }
-    }
+    
 
     private void Update()
     {
@@ -33,7 +22,28 @@ public class WayPointMove : MonoBehaviour
         }
         else
         {
-            gameObject.transform.position += gameObject.transform.position - play.transform.position;
+            //transform.Translate(Vector3.left * (velocidadMov+1) * Time.deltaTime);
+            // transform.Translate(Vector3.down * (velocidadMov-1) * Time.deltaTime * 0.1f);
+            if (Mathf.Abs(transform.position.x - play.transform.position.x) > 0.1 || Mathf.Abs(transform.position.y - play.transform.position.y) > 0.1) //Si la distancia es mayor al rango de ataque, significa que se tiene que acercar
+            {
+                if (transform.position.x < play.transform.position.x)
+                {
+
+                    transform.Translate(Vector3.left * (velocidadMov + 1) * Time.deltaTime);
+                    transform.Translate(Vector3.down * (velocidadMov + 1) * Time.deltaTime * 0.1f);
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+
+                }
+                else
+                {
+
+                    transform.Translate(Vector3.left * (velocidadMov + 1) * Time.deltaTime);
+                    transform.Translate(Vector3.down * (velocidadMov + 1) * Time.deltaTime * 0.1f);
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                }
+
+            }
         }
 
 
