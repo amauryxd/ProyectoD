@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1505025101842363188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2752476108988519773}
+  m_Layer: 0
+  m_Name: ControladorD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2752476108988519773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505025101842363188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.596, y: -0.103, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7532181240744472689}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7532181240471477074
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,6 +99,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7532181240744472689}
   - component: {fileID: 7532181240744472688}
+  - component: {fileID: 1559181133108591007}
+  - component: {fileID: 560248148888138248}
   - component: {fileID: 7532181240744472691}
   - component: {fileID: 7532181240744472694}
   - component: {fileID: 7532181240744472695}
@@ -97,6 +130,7 @@ Transform:
   m_Children:
   - {fileID: 7532181240471477075}
   - {fileID: 7532181241078791663}
+  - {fileID: 2752476108988519773}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,6 +186,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1559181133108591007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532181240744472701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0d9088dee7e204f8d269206b1bc528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controladorD: {fileID: 2752476108988519773}
+  maigc: {fileID: 8509483372134981758, guid: c92b1ab381b584c4790c55a2ff1f5cbe, type: 3}
+--- !u!114 &560248148888138248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532181240744472701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90781d3fbfe60ec46b16761394059f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ataq: 0
 --- !u!50 &7532181240744472691
 Rigidbody2D:
   serializedVersion: 4
@@ -262,6 +323,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: dde12b3b-2429-44bf-8929-a70815723013
     m_ActionName: Player/Atack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 560248148888138248}
+        m_TargetAssemblyTypeName: Magic, Assembly-CSharp
+        m_MethodName: magicc
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0bbcf341-6cec-4feb-baf9-f9411b9f06b9
+    m_ActionName: Player/Fire[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
