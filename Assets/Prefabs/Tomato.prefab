@@ -129,4 +129,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 20
-  danio: 5
+  danio: 4

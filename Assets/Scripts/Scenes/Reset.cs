@@ -7,7 +7,8 @@ public class Reset : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) { 
+        if (collision.CompareTag("Player")) {
+            PortalManager.PortalID = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
