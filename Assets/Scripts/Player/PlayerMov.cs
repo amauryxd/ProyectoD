@@ -30,7 +30,7 @@ public class PlayerMov : MonoBehaviour
     public Animator animacion;
     public Animator animacionE;
 
-    private AudioSource audio;
+    private AudioSource audio2;
     private void OnEnable()
     {
         //playerC.Enable();
@@ -84,6 +84,7 @@ public class PlayerMov : MonoBehaviour
     {      
         if (context.performed && tiempoSiguienteAtaque <= 0 )
         {
+            /*
             audio.Play();
             animacion.SetTrigger("Atac");
             Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
@@ -96,14 +97,15 @@ public class PlayerMov : MonoBehaviour
                     colisionador.transform.GetComponent<LifeSistemEnemy>().Danio(danioGolpe);
                 }
             }
-            //Golpe();
+            */
+            Golpe();
             tiempoSiguienteAtaque = tiempoEntreAtaques;
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audio2 = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -187,23 +189,23 @@ public class PlayerMov : MonoBehaviour
         isfacingR = !isfacingR;
         transform.Rotate(new Vector3(0, 180, 0));
     }
-    /*
+    
     void Golpe()
     {
-        audio.Play();
+        audio2.Play();
         animacion.SetTrigger("Atac");
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
-
-        foreach(Collider2D colisionador in objetos)
+        foreach (Collider2D colisionador in objetos)
         {
             if (colisionador.CompareTag("Enemy"))
             {
-                animacionE.SetTrigger("Hit");
+                //animacionE.SetTrigger("Hit");
+                //LifeSistemEnemy.vida = LifeSistemEnemy.vida - danioGolpe;
                 colisionador.transform.GetComponent<LifeSistemEnemy>().Danio(danioGolpe);
             }
         }
     }
-    */
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

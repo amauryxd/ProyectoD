@@ -17,14 +17,15 @@ public class Tomatoo : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * vel * Time.deltaTime);
+        //Debug.Log("danio: "+danio);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.transform.GetComponent<LifeSistemEnemy>().Danio(danio);
             Destroy(gameObject);
+            collision.transform.GetComponent<LifeSistemEnemy>().Danio(danio);
         }
     }
 }

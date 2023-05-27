@@ -20,13 +20,14 @@ public class Magic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(fruID == 0)
+
+        if (fruID == 0)
         {
-            
+
         }
         else
         {
-            if(fruID == 1)
+            if (fruID == 1)
             {
                 fruID = 0;
                 Manzana();
@@ -36,14 +37,14 @@ public class Magic : MonoBehaviour
             {
                 fruID = 0;
                 Limon();
-                
+
                 return;
             }
             if (fruID == 3)
             {
                 fruID = 0;
                 Dragon();
-                
+
                 return;
             }
         }
