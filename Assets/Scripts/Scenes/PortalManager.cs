@@ -26,6 +26,14 @@ public class PortalManager : MonoBehaviour
             gameObject.transform.position = Spawn.transform.position;
             PortalID = 0;
         }
+        if (PortalID == 4)
+        {
+            //GameObject portSpawn = GameObject.FindGameObjectWithTag("Portal");
+
+            GameObject Spawn = GameObject.FindGameObjectWithTag("Spawn");
+            gameObject.transform.position = Spawn.transform.position;
+            PortalID = 0;
+        }
 
     }
 

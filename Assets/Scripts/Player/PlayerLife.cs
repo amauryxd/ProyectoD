@@ -36,8 +36,8 @@ public class PlayerLife : MonoBehaviour
         //animacion.SetTrigger("dai");
         PlayerPrefs.DeleteAll();
         vidaP = 100;
-        SceneManager.LoadScene(1);
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
     public void Guardar()
     {

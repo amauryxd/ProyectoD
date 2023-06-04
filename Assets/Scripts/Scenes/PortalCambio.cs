@@ -12,6 +12,7 @@ public class PortalCambio : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
+        PortalManager.PortalID = 0;
     }
   
 
