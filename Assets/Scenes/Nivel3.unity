@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1833271052}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 9.72
+    OrthographicSize: 4.02
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -648,7 +648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388734883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.4, y: 5, z: -10}
+  m_LocalPosition: {x: -8.87, y: -3.34, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1352929881}
   m_Damping: 0.5
   m_MaxWindowSize: -1
 --- !u!1 &552119486
@@ -725,7 +725,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.72
+  orthographic size: 4.02
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -749,7 +749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552119486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.4, y: 5, z: -10}
+  m_LocalPosition: {x: -6.8308034, y: -2.94865, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29378,11 +29378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7532181240744472689, guid: 01b54b8e6def900478a2c93872096765, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 146.4
+      value: -8.87
       objectReference: {fileID: 0}
     - target: {fileID: 7532181240744472689, guid: 01b54b8e6def900478a2c93872096765, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: -3.34
       objectReference: {fileID: 0}
     - target: {fileID: 7532181240744472689, guid: 01b54b8e6def900478a2c93872096765, type: 3}
       propertyPath: m_LocalPosition.z

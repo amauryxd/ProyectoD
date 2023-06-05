@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LifeSistemEnemy : MonoBehaviour
 {
@@ -9,12 +10,20 @@ public class LifeSistemEnemy : MonoBehaviour
     public MovPlat mov;
     public float vidaACT;
 
-
+    public bool witch;
     // Start is called before the first frame update
     void Start()
     {
         animacion = GetComponent<Animator>();
-        vida = 5;
+        if (!witch)
+        {
+            vida = 5;
+        }
+        else
+        {
+            vida = 50;
+        }
+        
     }
     
     public void Danio(float damage)
@@ -33,7 +42,14 @@ public class LifeSistemEnemy : MonoBehaviour
     {
         //animacion.SetTrigger("ded");
         //mov.enabled = false;
-        Destroy(gameObject);
+        if (!witch)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
     /*
     private void Update()

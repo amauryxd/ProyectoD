@@ -35,7 +35,7 @@ public class PlayerLife : MonoBehaviour
     {
         //animacion.SetTrigger("dai");
         PlayerPrefs.DeleteAll();
-        vidaP = 100;
+        vidaP = 10;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
